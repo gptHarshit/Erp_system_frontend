@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply bg-secondary font-sans;
+}
+
+/* Force react-calendar full width on mobile */
+.mobile-calendar {
+  width: 100% !important;
+}
+
+
+@media (max-width: 1024px) {
+  .react-calendar {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .react-calendar__tile {
+    padding: 12px 0 !important;
+  }
+
+  .react-calendar__month-view__weekdays {
+    font-size: 12px;
+  }
+
+  .react-calendar__navigation {
+    height: 48px;
+  }
+}

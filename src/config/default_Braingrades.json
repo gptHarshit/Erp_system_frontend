@@ -1,0 +1,250 @@
+{
+  "PROJECT_ID": 1000,
+  "PROJECT_NAME": "BRAINGRADES INTERNATIONAL SCHOOL",
+  "FE_LOGO_URL": "https://d3vmvj34imavjj.cloudfront.net/emails/braingrades_logo.png",
+  "INSTITUTE_ADDRESS": "sector 4 , Noida,201309",
+  "EXAM_TYPE_SCORE": {
+    "FORMATIVE": 30,
+    "SUMMATIVE": 100
+  },
+  "TOP_SCORER_CRITERIA": {
+    "max_class": "CLASS_10",
+    "current_session": "2026-2027",
+    "exam_type": "ALL_EXAM_TYPE"
+  },
+  "PAYMENT_TYPES": {
+    "ACADEMIC": "ACADEMIC_FEE",
+    "SPORTS": "SPORT_FEE",
+    "OTHER": "OTHER_FEE"
+  },
+  "ACADEMICS": {
+    "EMAIL_TYPES": [
+      "STD_WELCOME",
+      "STD_SUMMATIVE",
+      "STD_FORMATIVE",
+      "STD_ATTENDANCE"
+    ],
+    "CLASSES": [
+      "CLASS_1",
+      "CLASS_2",
+      "CLASS_3",
+      "CLASS_4",
+      "CLASS_5",
+      "CLASS_6",
+      "CLASS_7",
+      "CLASS_8",
+      "CLASS_9",
+      "CLASS_10",
+      "CLASS_11",
+      "CLASS_12"
+    ],
+    "SECTIONS": ["A", "B", "C", "D"],
+    "COURSES": ["SC_M_001", "SC_B_002", "COM_004", "ART_003"],
+    "ACADEMICSESSIONS": [
+      "2026-2027",
+      "2027-2028",
+      "2028-2029",
+      "2029-2030",
+      "2030-2031",
+      "2031-2032",
+      "2032-2033",
+      "2033-2034",
+      "2034-2035",
+      "2035-2036"
+    ],
+    "EXAM_TYPES": ["FORMATIVE", "SUMMATIVE", "ALL_EXAM_TYPE"],
+    "SUBJECTS_BY_COURSE": {
+      "SC_M_001": [
+        { "id": "SUB_001", "name": "MATHEMATICS" },
+        { "id": "SUB_002", "name": "PHYSICS" },
+        { "id": "SUB_003", "name": "CHEMISTRY" },
+        { "id": "SUB_004", "name": "BIOLOGY" },
+        { "id": "SUB_005", "name": "ENGLISH" },
+        { "id": "SUB_006", "name": "ECONOMICS" }
+      ],
+
+      "SC_B_002": [
+        { "id": "SUB_001", "name": "MATHEMATICS" },
+        { "id": "SUB_002", "name": "PHYSICS" },
+        { "id": "SUB_003", "name": "CHEMISTRY" },
+        { "id": "SUB_005", "name": "ENGLISH" },
+        { "id": "SUB_012", "name": "COMPUTER_SC" },
+        { "id": "SUB_006", "name": "ECONOMICS" }
+      ],
+
+      "ART_003": [
+        { "id": "SUB_007", "name": "HISTORY" },
+        { "id": "SUB_008", "name": "GEOGRAPHY" },
+        { "id": "SUB_009", "name": "POL_SCIENCE" },
+        { "id": "SUB_005", "name": "ENGLISH" },
+        { "id": "SUB_006", "name": "ECONOMICS" }
+      ],
+
+      "COM_004": [
+        { "id": "SUB_011", "name": "ACCOUNTING" },
+        { "id": "SUB_010", "name": "BUSINESS" },
+        { "id": "SUB_006", "name": "ECONOMICS" },
+        { "id": "SUB_005", "name": "ENGLISH" },
+        { "id": "SUB_012", "name": "COMPUTER_SC" }
+      ]
+    }
+  },
+  "STUDENT_META": {
+    "STATUSES": ["ACTIVE", "COMPLETED", "DROPPED"],
+    "CATEGORIES": ["GENERAL", "OBC", "SC", "ST", "EWS"],
+    "RELIGIONS": [
+      "HINDU",
+      "MUSLIM",
+      "CHRISTIAN",
+      "SIKH",
+      "BUDDHIST",
+      "JAIN",
+      "OTHER"
+    ]
+  },
+  "FEE_CONFIG": {
+    "MONTHS": [
+      "JANUARY",
+      "FEBRUARY",
+      "MARCH",
+      "APRIL",
+      "MAY",
+      "JUNE",
+      "JULY",
+      "AUGUST",
+      "SEPTEMBER",
+      "OCTOBER",
+      "NOVEMBER",
+      "DECEMBER"
+    ],
+
+    "FEE_CYCLE": ["MONTHLY", "YEARLY"],
+
+    "FINE_TYPE": ["LATE_FEE", "NONE"],
+
+    "YEAR_RANGE": {
+      "start": 2024,
+      "count": 8
+    }
+  },
+  "SIDEBAR": {
+    "ADMIN": {
+      "DASHBOARD": true,
+
+      "EMPLOYEE": {
+        "VISIBLE": true,
+        "ADD_EMPLOYEE": true,
+        "MANAGE_EMPLOYEE": true
+      },
+
+      "STUDENT": {
+        "VISIBLE": true,
+        "ENROLLMENT": true,
+        "ENROLLMENT_UPDATE": true,
+        "PROMOTION": true,
+        "EXPORT": true
+      },
+
+      "ACADEMICS": {
+        "VISIBLE": true,
+        "RESULT_FEED": true,
+        "ATTENDANCE": true,
+        "VIDEO_CALL": true,
+        "HOMEWORK": true,
+        "NOTICE": true
+      },
+
+      "FEES": {
+        "VISIBLE": true,
+        "ASSIGNMENT": true,
+        "ANALYTIC": true
+      },
+
+      "ADMIN": {
+        "VISIBLE": true,
+        "TRIGGER": true,
+        "PRINT_REPORT": true,
+        "PRINT_ID": true
+      }
+    },
+
+    "TEACHER": {
+      "DASHBOARD": true,
+
+      "EMPLOYEE": {
+        "VISIBLE": true,
+        "ADD_EMPLOYEE": true,
+        "MANAGE_EMPLOYEE": true
+      },
+      "STUDENT": {
+        "VISIBLE": true,
+        "ENROLLMENT": true,
+        "ENROLLMENT_UPDATE": true,
+        "PROMOTION": true,
+        "EXPORT": true
+      },
+
+      "ACADEMICS": {
+        "VISIBLE": true,
+        "RESULT_FEED": true,
+        "ATTENDANCE": true,
+        "VIDEO_CALL": true,
+        "HOMEWORK": true,
+        "NOTICE": true
+      },
+
+      "FEES": {
+        "VISIBLE": true,
+        "ASSIGNMENT": true,
+        "ANALYTIC": true
+      },
+
+      "ADMIN": {
+        "VISIBLE": true,
+        "TRIGGER": true,
+        "PRINT_REPORT": true,
+        "PRINT_ID": true
+      }
+    },
+
+    "EMPLOYEE": {
+      "DASHBOARD": true,
+
+      "EMPLOYEE": {
+        "VISIBLE": true,
+        "ADD_EMPLOYEE": true,
+        "MANAGE_EMPLOYEE": true
+      },
+
+      "STUDENT": {
+        "VISIBLE": true,
+        "ENROLLMENT": true,
+        "ENROLLMENT_UPDATE": true,
+        "PROMOTION": true,
+        "EXPORT": true
+      },
+
+      "ACADEMICS": {
+        "VISIBLE": true,
+        "RESULT_FEED": true,
+        "ATTENDANCE": true,
+        "VIDEO_CALL": true,
+        "HOMEWORK": true,
+        "NOTICE": true
+      },
+
+      "FEES": {
+        "VISIBLE": true,
+        "ASSIGNMENT": true,
+        "ANALYTIC": true
+      },
+
+      "ADMIN": {
+        "VISIBLE": true,
+        "TRIGGER": true,
+        "PRINT_REPORT": true,
+        "PRINT_ID": true
+      }
+    }
+  }
+}

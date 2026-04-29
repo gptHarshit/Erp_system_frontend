@@ -1,0 +1,59 @@
+name: Deploy Admin Portal
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build React App
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Prepare EC2 Directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # 1. Use sudo to delete files currently owned by www-data
+            sudo rm -rf /var/www/braingrades/admin/*
+            # 2. Change ownership to ubuntu so the SCP step below has permission to write
+            sudo chown -R ${{ secrets.EC2_USERNAME }}:${{ secrets.EC2_USERNAME }} /var/www/braingrades/admin
+
+      - name: SCP Build Files to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "dist/*"
+          target: "/var/www/braingrades/admin"
+          strip_components: 1
+
+      - name: Finalize Nginx Permissions
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # 3. Give ownership back to Nginx user for serving the site
+            sudo chown -R www-data:www-data /var/www/braingrades/admin
+            sudo chmod -R 755 /var/www/braingrades/admin
+            sudo systemctl reload nginx
